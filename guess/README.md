@@ -1,5 +1,18 @@
 # Ideas
+///
+I need to decide exactly what the flows is of the game for when the user signs in.
+maybe:
+sign in -> 
 
+
+when the computer figures out one digit it haas the cypher gif that is able to crack the first letter.
+
+
+Incorporate Amusing User Experience
+Add entertaining messages or animations to display during the waiting period.
+Make the waiting period interactive or engaging for the user.
+For example: the enigma of alan turing cracked the german cypher in X amopunt of time and shortened the war for a few years. have fun facts like these in the app.
+////
 have it so the user chooses level: easy, medium, hard and then this bases how many questions will be asked after the user guess the password.
 and the questions asked will be things like:
 - is there any letters?"

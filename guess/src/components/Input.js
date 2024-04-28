@@ -1,22 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Styled component for centered input
 const CenteredInput = styled.input`
-  width: 200px; /* Adjust width as needed */
-  height: 40px; /* Adjust height as needed */
-  margin: auto; /* Center horizontally */
-  display: block; /* Ensure input is a block-level element */
+  width: 200px;
+  height: 40px;
+  margin: auto;
+  display: block;
 `;
 
-const Input = ({ value, onChange }) => {
+const CenteredButton = styled.button`
+  width: 200px;
+  height: 40px;
+  margin: 10px auto; /* Adjust vertical margin as needed */
+  display: block;
+`;
+
+const Input = ({ value, onChange, onSubmit }) => {
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            onSubmit();
+        }
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSubmit();
+    };
+
     return (
-        <CenteredInput
-            type="text"
-            value={value}
-            onChange={onChange}
-            placeholder="Enter password here"
-        />
+        <form onSubmit={handleSubmit}>
+            <CenteredInput
+                type="text"
+                value={value}
+                onChange={onChange}
+                onKeyPress={handleKeyPress}
+                placeholder="Enter password here"
+            />
+            <CenteredButton type="submit">Submit Password</CenteredButton>
+        </form>
     );
 };
 
