@@ -16,29 +16,29 @@ const CenteredButton = styled.button`
 `;
 
 const Input = ({ value, onChange, onSubmit }) => {
-    const handleKeyPress = (event) => {
-        if (event.key === 'Enter') {
-            onSubmit();
-        }
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      onSubmit();
     }
+  }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        onSubmit();
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit();
+  };
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <CenteredInput
-                type="text"
-                value={value}
-                onChange={onChange}
-                onKeyPress={handleKeyPress}
-                placeholder="Enter password here"
-            />
-            <CenteredButton type="submit">Submit Password</CenteredButton>
-        </form>
-    );
+  return (
+    <form onSubmit={handleSubmit}>
+      <CenteredInput
+        type="text"
+        value={value}
+        onChange={onChange}
+        onKeyPress={handleKeyPress}
+        placeholder="Enter password here"
+      />
+      <CenteredButton type="submit">Submit Password</CenteredButton>
+    </form>
+  );
 };
 
 export default Input;

@@ -20,16 +20,18 @@ function App() {
     setPassword(event.target.value);
   };
 
-  const handlePasswordSubmit = () => {
+  const handlePasswordSubmit = (event) => {
     // Logic to handle password after submission can go here
+    if (event) event.preventDefault();
     console.log("Password submitted:", password);
+    alert("Password submitted: " + password);
   };
 
   return (
     <Page>
       <Header />
       <div style={{ position: 'absolute', top: 0, left: 0, padding: '10px', color: 'white' }}>
-      <p>Your Password: </p>{password}
+        <p>Your Password: </p>{password}
       </div>
       {difficulty ? (
         <div>
